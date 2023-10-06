@@ -1,9 +1,15 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter_iniciante_widgets/home_page.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: HomePage(),
-  ));
+main() {
+  runApp(Container(
+      child: Center(
+        child: Text(
+          'Leonardo',
+          textDirection: TextDirection.ltr,
+          style: TextStyle(color: Colors.white, fontSize: 50.0),
+        ),
+      ),
+    ),
+  );
 }
