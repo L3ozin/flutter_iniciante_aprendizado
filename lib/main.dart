@@ -14,9 +14,32 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: Container(
-          child: Center(child: Text('Leonardo')),
-        ));
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() {
+    return HomePageState();
+  }
+}
+
+class HomePageState extends State<HomePage> {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: GestureDetector(
+      child: Text('Contador: $counter'),
+      onTap: () {
+        setState(() {
+          counter++;
+        });
+      },
+    ));
   }
 }
